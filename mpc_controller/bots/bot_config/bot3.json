@@ -1,0 +1,17 @@
+{
+    "name":"bot-3",
+    "states":
+    {   
+        "x" : 5,
+        "y" : 5,
+        "theta" : 4.71238898038469,
+        "v" : 0.5,
+        "w" : 0
+    },
+    "dimensions":
+    {
+        "length_offset_COM" : 0.05,
+        "length" : 0.645,
+        "width" : 0.6
+    }
+}

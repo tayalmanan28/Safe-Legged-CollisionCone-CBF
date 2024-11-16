@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+
+<robot name="architrave">
+
+  <link name="base_link"> 
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0" ixy="0.0" ixz="0.0" iyy="0" iyz="0.0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.001"/>
+      </geometry> 
+      <material name="grey">
+        <color rgba=".5 .5 .5 1"/>
+      </material> 
+    </visual>
+  </link>
+
+
+
+  <link name="grey_edge"> 
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.225"/>
+      <mass value="0.25"/>
+      <inertia ixx="0" ixy="0.0" ixz="0.0" iyy="0" iyz="0.0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.225"/>
+      <geometry>
+        <box size="5 .05 .05" />
+      </geometry> 
+      <material name="grey">
+        <color rgba=".5 .5 .5 1"/>
+      </material> 
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.225"/>
+      <geometry>
+        <box size="5 .05 .05" />
+      </geometry>
+    </collision>  
+  </link>
+  <joint name="grey_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="grey_edge"/>
+  </joint>
+
+
+  <link name="support"> 
+
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.5"/>
+      <mass value="10.0"/>
+      <inertia ixx="0" ixy="0.0" ixz="0.0" iyy="0" iyz="0.0" izz="0"/>
+    </inertial>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.5"/>
+      <geometry>
+        <cylinder length=".5" radius="0.5" />
+      </geometry> 
+      <material name="kindablue">
+        <color rgba=".1 .5 .7 1"/>
+      </material> 
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.5"/>
+      <geometry>
+        <cylinder length=".5" radius="0.5" />
+      </geometry>
+    </collision>  
+
+  </link>
+    <joint name="support_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="support"/>
+  </joint>
+
+
+</robot>
+

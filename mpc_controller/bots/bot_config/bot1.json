@@ -1,0 +1,25 @@
+{
+    "name":"bot-1",
+    "states":
+    {   
+        "x" : 0,
+        "y" : 0,
+        "theta" : 0.00001,
+        "v" : 0.2,
+        "w" : 0.000001
+    },
+    "dimensions":
+    {
+        "length_offset_COM" : 0.05,
+        "length" : 3,
+        "width" : 1,
+        "radius" : 0.033
+    },
+    "mass-inertia":
+    {
+        "Izz" : 0.258,
+        "Iyy" : 0.258,
+        "Ixx" : 0.08,
+        "m" : 22.4
+    }
+}

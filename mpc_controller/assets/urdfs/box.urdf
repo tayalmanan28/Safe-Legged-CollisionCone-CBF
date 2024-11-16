@@ -1,0 +1,23 @@
+<?xml version="0.0" ?>
+<robot name="plane">
+<link name="box">
+  <visual>
+    <geometry>
+      <box size="0.2 1.0 1.0"/>
+    </geometry>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.2 1.0 1.0"/>
+    </geometry>
+  </collision>
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+  <inertial>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="1.66" ixy="0" ixz="0" iyy="1.66" iyz="0" izz="1.66"/>
+  </inertial>
+</link>
+</robot>
